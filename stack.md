@@ -105,3 +105,13 @@ Si el mensaje de commit no cumple con la convención, el commit será bloqueado 
 3. Si hay errores de lint, el commit se bloquea; si hay problemas de formato, se corrigen automáticamente.
 
 ---
+
+### Comandos para builder, levantar e inspeccionar el docker.
+
+docker build -t ng-template:local .
+docker run --rm -p 8080:80 ng-template:local
+docker run --rm -it --entrypoint sh ng-template:local
+
+docker build -t ng-template-dev:local -f Dockerfile.dev .
+docker run --rm -p 8081:80 ng-template-dev:local
+docker run --rm -it --entrypoint sh ng-template-dev:local

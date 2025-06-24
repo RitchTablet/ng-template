@@ -8,7 +8,7 @@ COPY package*.json ./
 RUN npm ci
 COPY . .
 # Construye la app Angular en modo producción
-RUN npm run build:prod
+RUN npm run build:dev
 
 # Etapa 2: Servidor NGINX para servir archivos estáticos
 FROM nginx:1.27-alpine AS prod
