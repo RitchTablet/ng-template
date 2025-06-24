@@ -1,0 +1,5 @@
+npx --no-install commitlint --edit "$1" || (
+  echo "⛔️ El mensaje de commit no sigue el formato Conventional Commits. Ejemplo: feat: agrega nueva funcionalidad"
+  echo "Consulta: https://www.conventionalcommits.org/es/v1.0.0/"
+  exit 1
+)
